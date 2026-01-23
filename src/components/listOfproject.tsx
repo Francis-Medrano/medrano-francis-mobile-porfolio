@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { globalStyles } from '../globalStyles';
 
 const projects = [
@@ -23,14 +23,21 @@ type ListOfProjectProps = {
 
 export default function ListOfProject({ styles }: ListOfProjectProps) {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Text style={styles.sectionTitle}>Projects</Text>
-      {projects.map(item => (
-        <View key={item.name} style={{ marginBottom: 12 }}>
-          <Text style={styles.skill}>{item.name}</Text>
-          <Text style={styles.sectionContent}>{item.description}</Text>
-        </View>
-      ))}
+      <FlatList
+        data={projects}
+        keyExtractor={item => item.name}
+        renderItem={({ item }) => (
+          <View style={{ marginBottom: 12 }}>
+            <Text style={styles.skill}>{item.name}</Text>
+            <Text style={styles.sectionContent}>{item.description}</Text>
+          </View>
+        )}
+        // Add this style to ensure the FlatList can grow
+        style={{ flexGrow: 0 }}
+        contentContainerStyle={{ paddingBottom: 12 }}
+      />
     </View>
   );
 }

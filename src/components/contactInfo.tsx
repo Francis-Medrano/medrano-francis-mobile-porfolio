@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Linking, TouchableOpacity, TextInput, Alert } from 'react-native';
+import { View, Text, Linking, TouchableOpacity, TextInput, Alert, StyleSheet } from 'react-native';
 import { globalStyles } from '../globalStyles';
 
 type ContactInfoProps = {
@@ -16,6 +16,10 @@ export default function ContactInfo({ styles }: ContactInfoProps) {
       Alert.alert('All fields are required.');
       return;
     }
+    if (!email.includes('@')) {
+      Alert.alert('Please enter a valid email address.');
+      return;
+    }
     // ...handle actual submission logic here...
     Alert.alert('Message sent!');
     setName('');
@@ -24,7 +28,7 @@ export default function ContactInfo({ styles }: ContactInfoProps) {
   };
 
   return (
-    <View style={{ marginTop: 24 }}>
+    <View>
       <Text style={styles.sectionTitle}>Contact</Text>
       <Text style={styles.sectionContent}>Email: francis_medrano@dlsl.edu.ph</Text>
       <TouchableOpacity onPress={() => Linking.openURL('https://github.com/Francis-Medrano')}>
