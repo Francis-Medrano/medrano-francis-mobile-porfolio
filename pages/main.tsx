@@ -1,37 +1,22 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View } from 'react-native';
 import { globalStyles } from '../src/globalStyles';
+import ProfileNname from '../src/components/profileNname';
+import Bio from '../src/components/bio';
+import Skills from '../src/components/skills';
+import ContactInfo from '../src/components/contactInfo';
+import ListOfProject from '../src/components/listOfproject';
 
 export default function MainPortfolio() {
+  const styles = globalStyles;
+
   return (
-    <ScrollView contentContainerStyle={globalStyles.container}>
-      <Image
-        source={{ uri: 'https://i.pravatar.cc/300?img=1' }}
-        style={globalStyles.profileImage}
-      />
-      <Text style={globalStyles.name}>Francis Medrano</Text>
-      <Text style={globalStyles.title}>Mobile Developer & Designer</Text>
-
-      <Text style={globalStyles.sectionTitle}>About Me</Text>
-      <Text style={globalStyles.sectionContent}>
-        Passionate developer with experience in building beautiful and functional mobile apps using React Native and Expo.
-      </Text>
-
-      <Text style={globalStyles.sectionTitle}>Skills</Text>
-      <View style={globalStyles.skillsContainer}>
-        <Text style={globalStyles.skill}>React Native</Text>
-        <Text style={globalStyles.skill}>TypeScript</Text>
-        <Text style={globalStyles.skill}>Expo</Text>
-        <Text style={globalStyles.skill}>UI/UX Design</Text>
-        <Text style={globalStyles.skill}>JavaScript</Text>
-      </View>
-
-      <Text style={globalStyles.sectionTitle}>Projects</Text>
-      <Text style={globalStyles.sectionContent}>
-        • Portfolio App - A showcase of my work and skills.{'\n'}
-        • Task Manager - Productivity app for daily tasks.{'\n'}
-        • WeatherNow - Real-time weather updates.
-      </Text>
-    </ScrollView>
+    <View style={styles.container}>
+      <ProfileNname styles={styles} />
+      <Bio styles={styles} />
+      <Skills styles={styles} />
+      <ListOfProject styles={styles} />
+      <ContactInfo styles={styles} />
+    </View>
   );
 }

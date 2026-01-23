@@ -58,3 +58,62 @@ export const globalStyles = StyleSheet.create({
     color: '#333',
   },
 });
+
+export const darkStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#181818',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 60,
+    paddingHorizontal: 20,
+  },
+  profileImage: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    marginBottom: 20,
+    backgroundColor: '#333',
+  },
+  name: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginBottom: 6,
+    color: '#fff',
+  },
+  title: {
+    fontSize: 18,
+    color: '#fff',
+    marginBottom: 18,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    marginTop: 24,
+    marginBottom: 8,
+    color: '#fff',
+    alignSelf: 'flex-start',
+  },
+  sectionContent: {
+    fontSize: 16,
+    color: '#fff',
+    marginBottom: 8,
+    alignSelf: 'flex-start',
+  },
+  skillsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 8,
+    alignSelf: 'flex-start',
+  },
+  skill: {
+    backgroundColor: '#333',
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    marginRight: 8,
+    marginBottom: 8,
+    fontSize: 14,
+    color: '#fff',
+  },
+});
