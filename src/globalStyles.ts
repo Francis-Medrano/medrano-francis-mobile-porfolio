@@ -90,6 +90,41 @@ export const globalStyles = StyleSheet.create({
     fontSize: 14,
     color: '#333',
   },
+  contactForm: {
+    width: 300,
+    marginTop: 16,
+    marginBottom: 16,
+    alignSelf: 'stretch',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 12,
+    fontSize: 16,
+    backgroundColor: '#fff',
+    color: '#222',
+  },
+  messageBox: {
+    height: 80,
+    textAlignVertical: 'top',
+  },
+  submitButton: {
+    backgroundColor: '#007AFF',
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 100,
+  },
+  submitButtonDisabled: {
+    backgroundColor: '#b0b0b0',
+  },
+  submitButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
 });
 
 export const darkStyles = StyleSheet.create({
@@ -180,5 +215,40 @@ export const darkStyles = StyleSheet.create({
     marginBottom: 8,
     fontSize: 14,
     color: '#fff',
+  },
+  contactForm: {
+    width: 300,
+    marginTop: 16,
+    marginBottom: 16,
+    alignSelf: 'stretch',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#444',
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 12,
+    fontSize: 16,
+    backgroundColor: '#222',
+    color: '#fff',
+  },
+  messageBox: {
+    height: 200,
+    textAlignVertical: 'top',
+  },
+  submitButton: {
+    backgroundColor: '#007AFF',
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 100,
+  },
+  submitButtonDisabled: {
+    backgroundColor: '#444',
+  },
+  submitButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 });

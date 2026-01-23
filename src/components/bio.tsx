@@ -8,8 +8,11 @@ type BioProps = {
 
 export default function Bio({ styles }: BioProps) {
   return (
-    <Text style={styles.sectionContent}>
-      Passionate developer with experience in building beautiful and functional mobile apps using React Native and Expo.
-    </Text>
+    <>
+      <Text style={styles.sectionTitle}>Bio</Text>
+      <Text style={styles.sectionContent}>
+        Passionate developer focused on clean code and elegant solutions, with a strong emphasis on building reliable, maintainable, and user-friendly applications.
+      </Text>
+    </>
   );
 }

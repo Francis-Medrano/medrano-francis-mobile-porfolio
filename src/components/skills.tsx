@@ -16,6 +16,7 @@ export default function Skills({ styles }: SkillsProps) {
         <Text style={styles.skill}>Expo</Text>
         <Text style={styles.skill}>UI/UX Design</Text>
         <Text style={styles.skill}>JavaScript</Text>
+        <Text style={styles.skill}>C++</Text>
       </View>
     </>
   );
