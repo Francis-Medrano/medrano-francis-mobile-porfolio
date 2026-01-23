@@ -34,7 +34,6 @@ export default function ListOfProject({ styles }: ListOfProjectProps) {
             <Text style={styles.sectionContent}>{item.description}</Text>
           </View>
         )}
-        // Add this style to ensure the FlatList can grow
         style={{ flexGrow: 0 }}
         contentContainerStyle={{ paddingBottom: 12 }}
       />
